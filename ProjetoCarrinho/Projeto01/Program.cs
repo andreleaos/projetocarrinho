@@ -1,10 +1,31 @@
-﻿namespace Projeto01
+﻿using Projeto01.Entities;
+
+namespace Projeto01;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        CarrinhoCompra carrinho = new CarrinhoCompra();
+
+        Produto produto1 = new Produto() { 
+            Descricao = "Mouse Gamer Xpto Bubles", 
+            Qtde = 1, 
+            Preco = 39.90
+        };
+
+        Produto produto2 = new Produto()
         {
-            Console.WriteLine("Hello, World!");
-        }
+            Descricao = "Teclado Gamer Xpto Bubles",
+            Qtde = 1,
+            Preco = 169.90
+        };
+
+
+        carrinho.AdicionarItem(produto1);
+        carrinho.AdicionarItem(produto2);
+
+        double valorCompra = carrinho.ExibirValorCompra();
+        Console.WriteLine($"O valor da compra foi de: R$ {valorCompra}");
     }
 }
