@@ -1,3 +1,1 @@
-arquivo inicial do projeto
-
 solucao .net com conceitos sobre desenvolvimento
